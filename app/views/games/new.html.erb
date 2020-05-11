@@ -1,0 +1,17 @@
+<!-- "new" view -->
+
+<%= @letters %>
+
+<div class="form-box">
+  <div class="form">
+    <form class="input" action="/score" method="post">
+      <label id="label" for="question">What is the longest word you can find?</label><br>
+      <input id="word" type="text" name="word">
+      <input class="button" type="submit" value="Word">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <%= hidden_field_tag :letter_array, @letters %>
+    </form>
+  </div>
+</div>
+
+
